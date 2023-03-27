@@ -1,5 +1,5 @@
 import NewPostForm from "../components/posts/NewPostForm";
-import classes from "./NewPost.module.css";
+import classes from "./NewPosts.module.css";
 import { useHistory } from "react-router-dom";
 
 const NewPostPage = () => {
