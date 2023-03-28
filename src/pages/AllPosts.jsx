@@ -34,12 +34,24 @@ const AllPostsPage = () => {
   useEffect(fetchData, []);
 
   return (
-    <div className={classes.allposts}>
+    <>
+      <div classname={classes.mainQuote}>
+          <h1 >
+            Together <br></br>
+            We can <br></br>
+            Make it Happen <br></br>
+          </h1>
 
-      
-      <h1>Check What's new in the commuity</h1>
-      {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
+          <div>
+            Connecting Communities across the world!!!
+          </div>
+      </div>
+
+      <div className={classes.allposts}>
+        <h1>Check What's new in the commuity</h1>
+        {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
     </div>
+    </>
   );
 };
 
