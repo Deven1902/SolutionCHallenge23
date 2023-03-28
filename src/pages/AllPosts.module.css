@@ -4,5 +4,31 @@
 
 .mainQuote {
   padding: 2rem;
-  margin: 2rem;
+}
+
+.quoteHeading {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 87px;
+  letter-spacing: 0.1em;
+
+  color: #000000;
+  margin: 2rem 5rem;
+}
+
+.quoteSubheading {
+  /* Connecting communities across the world */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+
+  color: #595959;
+  margin: 2rem 5rem;
 }

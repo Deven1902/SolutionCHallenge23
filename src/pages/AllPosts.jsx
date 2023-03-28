@@ -36,13 +36,13 @@ const AllPostsPage = () => {
   return (
     <>
       <div classname={classes.mainQuote}>
-          <h1 >
+          <div className={classes.quoteHeading}>
             Together <br></br>
             We can <br></br>
             Make it Happen <br></br>
-          </h1>
+          </div>
 
-          <div>
+          <div className={classes.quoteSubheading}>
             Connecting Communities across the world!!!
           </div>
       </div>
