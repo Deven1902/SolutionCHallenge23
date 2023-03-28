@@ -10,7 +10,10 @@
 
 .logo {
   font-size: 2rem;
-  color: white;
+  background-color: white;
+  color: #F49D1A;
+  padding: 0 1rem;
+  border-radius: 1.5rem;
   font-weight: bold;
 }
 

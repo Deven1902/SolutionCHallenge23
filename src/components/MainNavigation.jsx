@@ -8,7 +8,7 @@ const MainNavigation = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}></div>
+      <div className={classes.logo}>CH</div>
 
       <nav className={classes.desktop_navigation}>
         <ul>
