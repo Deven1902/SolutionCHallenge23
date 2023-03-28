@@ -10,11 +10,11 @@ const FavouritesPage = () => {
 
   return (
     <div>
-      <h1 style={style}>Favourites</h1>
+      <h1 style={style}>Best of your community is found here</h1>
       {favouriteCtx.totalfavourites !== 0 ? (
         <PostList posts={favouriteCtx.favourites.reverse()} />
       ) : (
-        <p style={style}>No favourites !</p>
+        <p style={style}>Nothing here yet, add your favourites for easy access</p>
       )}
     </div>
   );

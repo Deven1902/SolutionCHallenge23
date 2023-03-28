@@ -35,7 +35,9 @@ const AllPostsPage = () => {
 
   return (
     <div className={classes.allposts}>
-      <h1>All Posts</h1>
+
+      
+      <h1>Check What's new in the commuity</h1>
       {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
     </div>
   );
