@@ -6,6 +6,7 @@ import MainNavigation from "./components/MainNavigation";
 import Login from './auth/Login';
 import ProtectedRoute from "./components/protectedRoute";
 import Dashboard from "./Dashboard";
+import Register from "./auth/Register";
 
 
 
@@ -25,6 +26,9 @@ const App = () => {
         <Route path="/favourites" element={<ProtectedRoute />}>
           <Route path="/favourites" element={<FavouritesPage />} />
         </Route>
+
+        <Route path="/register" element={<Register />} />
+
       </Routes>
     </>
   );

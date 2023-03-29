@@ -4,20 +4,21 @@ import { useContext } from "react";
 import FavouritesContext from "../store/favourites-context";
 import NavbarImg from './NavbarImg.png';
 import MobileNavigation from "./MobileNavigation";
-import { logout } from "../auth/firebase";
+import { auth, logout } from "../auth/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 const MainNavigation = () => {
   const favouriteCtx = useContext(FavouritesContext);
-
+  const [user, loading, error] = useAuthState(auth)
   return (
     <header className={classes.header}>
-     <div className={classes.logo}>
-        <img src={NavbarImg} alt="Logo"  />
+      <div className={classes.logo}>
+        <img src={NavbarImg} alt="Logo" />
         <div>CH</div>
       </div>
 
       <nav className={classes.desktop_navigation}>
         {
-          localStorage.getItem("login") === 'true' ?
+          user ?
             <ul>
               <li>
                 <Link to="/">All Posts</Link>
