@@ -1,12 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Login from '../pages/loginPage';
-import { isAuthenticated } from './auth';
+import Login from '../auth/Login';
 
 const ProtectedRoute = (props) => (
-    localStorage.getItem('login') == true
+    localStorage.getItem('login') === 'true'
         ? <Outlet />
-        : <Login type={props.type} />
+        : <Login />
 );
 
 export default ProtectedRoute;

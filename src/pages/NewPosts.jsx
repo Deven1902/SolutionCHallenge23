@@ -1,9 +1,9 @@
 import NewPostForm from "../components/posts/NewPostForm";
 import classes from "./NewPosts.module.css";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NewPostPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const onAddPost = (postData) => {
     fetch(
@@ -16,7 +16,7 @@ const NewPostPage = () => {
         },
       }
     ).then(() => {
-      history.replace("/");
+      navigate("/");
     });
   };
   return (

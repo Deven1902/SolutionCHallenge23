@@ -32,8 +32,8 @@ const signInWithGoogle = async () => {
         authProvider: "google",
         email: user.email,
       });
-      localStorage.setItem("login", true)
     }
+    localStorage.setItem("login", true)
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -77,6 +77,7 @@ const sendPasswordReset = async (email) => {
 };
 
 const logout = () => {
+  localStorage.setItem("login", false)
   signOut(auth);
 };
 

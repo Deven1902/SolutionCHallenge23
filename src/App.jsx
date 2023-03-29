@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllPostsPage from "./pages/AllPosts";
 import NewPostPage from "./pages/NewPosts";
 import FavouritesPage from "./pages/Favourites";
@@ -13,24 +13,19 @@ const App = () => {
   return (
     <>
       <MainNavigation />
-      <Switch>
-        <Route exact path="/" component={ProtectedRoute}>
-          <Route exact path="/" component={Dashboard} />
-        </Route>
-      </Switch>
-
-      <Switch>
-        <Route path="/dashboard" exact>
-          <AllPostsPage />
-        </Route>
-        <Route path="/new-post">
-          <NewPostPage />
-        </Route>
-        <Route path="/favourites">
-          <FavouritesPage />
+      <Routes>
+        <Route path="/" element={<ProtectedRoute />}>
+          <Route path="/" element={<AllPostsPage />} />
         </Route>
 
-      </Switch>
+        <Route path="/new-post" element={<ProtectedRoute />}>
+          <Route path="/new-post" element={<NewPostPage />} />
+        </Route>
+
+        <Route path="/favourites" element={<ProtectedRoute />}>
+          <Route path="/favourites" element={<FavouritesPage />} />
+        </Route>
+      </Routes>
     </>
   );
 };

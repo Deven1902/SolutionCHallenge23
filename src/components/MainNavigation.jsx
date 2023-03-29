@@ -1,4 +1,4 @@
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useContext } from "react";
 import FavouritesContext from "../store/favourites-context";
@@ -6,7 +6,6 @@ import MobileNavigation from "./MobileNavigation";
 import { logout } from "../auth/firebase";
 const MainNavigation = () => {
   const favouriteCtx = useContext(FavouritesContext);
-  const location = useHistory();
 
   return (
     <header className={classes.header}>
@@ -14,12 +13,10 @@ const MainNavigation = () => {
 
       <nav className={classes.desktop_navigation}>
         {
-          localStorage.getItem("login") != true ?
-            <></>
-            :
+          localStorage.getItem("login") === 'true' ?
             <ul>
               <li>
-                <Link to="/dashboard">All Posts</Link>
+                <Link to="/">All Posts</Link>
               </li>
               <li>
                 <Link to="/new-post">New Posts</Link>
@@ -34,11 +31,14 @@ const MainNavigation = () => {
               </li>
               <li onClick={() => {
                 logout();
-                location.replace("/")
+                window.location.href = "/";
               }}>
                 Logout
               </li>
-            </ul>}
+            </ul>
+            :
+            <></>
+        }
       </nav>
       <MobileNavigation />
     </header>
