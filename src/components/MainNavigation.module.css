@@ -19,6 +19,9 @@
   display: flex;
   align-items: center;
 }
+.logo:hover{
+  cursor: pointer;
+}
 
 .logo img {
   width: 100%;

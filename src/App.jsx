@@ -3,10 +3,9 @@ import AllPostsPage from "./pages/AllPosts";
 import NewPostPage from "./pages/NewPosts";
 import FavouritesPage from "./pages/Favourites";
 import MainNavigation from "./components/MainNavigation";
-import Login from './auth/Login';
 import ProtectedRoute from "./components/protectedRoute";
-import Dashboard from "./Dashboard";
 import Register from "./auth/Register";
+import Reset from "./auth/Reset";
 
 
 
@@ -27,8 +26,12 @@ const App = () => {
           <Route path="/favourites" element={<FavouritesPage />} />
         </Route>
 
-        <Route path="/register" element={<Register />} />
-
+        <Route path="/register" element={<ProtectedRoute reverse={true} />}>
+          <Route path="/register" element={<Register />} />
+        </Route>
+        <Route path="/reset" element={<ProtectedRoute reverse={true} />}>
+          <Route path="/reset" element={<Reset />} />
+        </Route>
       </Routes>
     </>
   );

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useContext } from "react";
 import FavouritesContext from "../store/favourites-context";
@@ -9,9 +9,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 const MainNavigation = () => {
   const favouriteCtx = useContext(FavouritesContext);
   const [user, loading, error] = useAuthState(auth)
+  const navigate = useNavigate()
+
+
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>
+      <div className={classes.logo} onClick={() => { navigate("/") }}>
         <img src={NavbarImg} alt="Logo" style={{ height: 100, padding: "10px" }} />
         <div>CH</div>
       </div>

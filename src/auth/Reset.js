@@ -1,8 +1,9 @@
+import { Snackbar } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { auth, sendPasswordResetEmail } from "./firebase";
+import { auth, sendPasswordReset } from "./firebase";
 import "./Reset.css";
 function Reset() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ function Reset() {
 
   const [message, setMessage] = useState("");
 
-  const useSnackBar = (message) => {
+  const UseSnackBar = (message) => {
     setMessage(message);
     setOpen(true);
     setTimeout(() => {
@@ -43,11 +44,11 @@ function Reset() {
         <button
           className="reset__btn"
           onClick={() => {
-            if (sendPasswordResetEmail(email)) {
-              useSnackBar("Password reset link sent!");
+            if (sendPasswordReset(email)) {
+              UseSnackBar("Password reset link sent!");
             }
             else {
-              useSnackBar("Error");
+              UseSnackBar("Error");
             }
           }}
         >
@@ -60,7 +61,7 @@ function Reset() {
       <Snackbar
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={open}
-        onClose={setOpen(false)}
+        onClose={setOpen}
         message={message}
       />
     </div>
