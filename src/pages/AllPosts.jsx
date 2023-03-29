@@ -1,6 +1,6 @@
 import PostList from "../components/posts/PostList";
 import classes from "./AllPosts.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
 
 const AllPostsPage = () => {
@@ -10,23 +10,23 @@ const AllPostsPage = () => {
   const fetchData = () => {
     setLoading(true);
     fetch(
-      ""
+      "https://community-hub-4-default-rtdb.firebaseio.com/posts.json"
     )
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        var posts = [];
+        var meetups = [];
         for (const key in data) {
-          const post = {
+          const meetup = {
             id: key,
             ...data[key],
           };
-          posts.push(post);
+          meetups.push(meetup);
         }
-        posts = posts.reverse();
-        console.log(posts);
-        setLoadedPosts(posts);
+        meetups = meetups.reverse();
+        console.log(meetups);
+        setLoadedPosts(meetups);
         setLoading(false);
       });
   };
@@ -35,22 +35,22 @@ const AllPostsPage = () => {
 
   return (
     <>
-      <div classname={classes.mainQuote}>
-          <div className={classes.quoteHeading}>
-            Together <br></br>
-            We can <br></br>
-            Make it Happen <br></br>
-          </div>
+      <div className={classes.mainQuote}>
+        <div className={classes.quoteHeading}>
+          Together <br></br>
+          We can <br></br>
+          Make it Happen <br></br>
+        </div>
 
-          <div className={classes.quoteSubheading}>
-            Connecting Communities across the world!!!
-          </div>
+        <div className={classes.quoteSubheading}>
+          Connecting Communities across the world!!!
+        </div>
       </div>
 
       <div className={classes.allposts}>
         <h1>Check What's new in the commuity</h1>
         {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
-    </div>
+      </div>
     </>
   );
 };
