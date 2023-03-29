@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useContext } from "react";
 import FavouritesContext from "../store/favourites-context";
+import NavbarImg from './NavbarImg.png';
 import MobileNavigation from "./MobileNavigation";
 const MainNavigation = () => {
   const favouriteCtx = useContext(FavouritesContext);
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>CH</div>
+     <div className={classes.logo}>
+        <img src={NavbarImg} alt="Logo"  />
+        <div>CH</div>
+      </div>
 
       <nav className={classes.desktop_navigation}>
         <ul>
