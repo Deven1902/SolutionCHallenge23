@@ -3,11 +3,18 @@ import AllPostsPage from "./pages/AllPosts";
 import NewPostPage from "./pages/NewPosts";
 import FavouritesPage from "./pages/Favourites";
 import MainNavigation from "./components/MainNavigation";
+import Login from './Login';
+
+
 
 const App = () => {
   return (
     <>
       <MainNavigation />
+      <Switch>
+        <Route exact path="/" component={Login} />
+      </Switch>
+
       <Switch>
         <Route path="/" exact>
           <AllPostsPage />
@@ -18,6 +25,7 @@ const App = () => {
         <Route path="/favourites">
           <FavouritesPage />
         </Route>
+
       </Switch>
     </>
   );
