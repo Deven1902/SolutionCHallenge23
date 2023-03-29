@@ -7,7 +7,7 @@ const NewPostPage = () => {
 
   const onAddPost = (postData) => {
     fetch(
-      "",
+      "https://community-hub-4-default-rtdb.firebaseio.com/posts.json",
       {
         method: "POST",
         body: JSON.stringify(postData),

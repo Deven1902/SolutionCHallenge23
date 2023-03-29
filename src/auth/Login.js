@@ -14,8 +14,9 @@ function Login() {
       // maybe trigger a loading screen
       return;
     }
-    if (user) navigate("/dashboard");
+    if (user) navigate.replace("/dashboard");
   }, [user, loading]);
+  
   return (
     <div className="login">
       <div className="login__container">
