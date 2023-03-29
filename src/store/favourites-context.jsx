@@ -3,17 +3,17 @@ import { createContext, useState } from "react";
 const FavouritesContext = createContext({
   favourites: [],
   totalfavourites: 0,
-  addFavourite: (favouriteMetup) => {},
+  addFavourite: (favouritePost) => {},
   removeFavourite: (postId) => {},
   isItemFavourite: (postId) => {},
 });
 
 export const FavouritesContextProvider = (props) => {
-  const [favouriteMetups, updateFavourite] = useState([]);
+  const [favouritePosts, updateFavourite] = useState([]);
 
-  const addFavouritehandler = (favouriteMetup) => {
+  const addFavouritehandler = (favouritePost) => {
     updateFavourite((prevFavourite) => {
-      return prevFavourite.concat(favouriteMetup);
+      return prevFavourite.concat(favouritePost);
     });
   };
 
@@ -24,12 +24,12 @@ export const FavouritesContextProvider = (props) => {
   };
 
   const isItemFavouritehandler = (postId) => {
-    return favouriteMetups.some((post) => post.id === postId);
+    return favouritePosts.some((post) => post.id === postId);
   };
 
   const context = {
-    favourites: favouriteMetups,
-    totalfavourites: favouriteMetups.length,
+    favourites: favouritePosts,
+    totalfavourites: favouritePosts.length,
     addFavourite: addFavouritehandler,
     removeFavourite: removeFavouriteHandler,
     isItemFavourite: isItemFavouritehandler,
