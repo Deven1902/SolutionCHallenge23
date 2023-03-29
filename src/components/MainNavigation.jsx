@@ -12,7 +12,7 @@ const MainNavigation = () => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <img src={NavbarImg} alt="Logo" />
+        <img src={NavbarImg} alt="Logo" style={{ height: 100, padding: "10px" }} />
         <div>CH</div>
       </div>
 
@@ -34,19 +34,22 @@ const MainNavigation = () => {
                   </span>
                 </Link>
               </li>
-              <li onClick={() => {
-                logout();
-                window.location.href = "/";
-              }}>
-                Logout
-              </li>
+              <Link to="/">
+                <li onClick={() => {
+                  logout();
+                }}
+                  style={{ color: 'white', fontSize: 18, fontWeight: 'normal' }}
+                >
+                  Logout
+                </li>
+              </Link>
             </ul>
             :
             <></>
         }
       </nav>
       <MobileNavigation />
-    </header>
+    </header >
   );
 };
 

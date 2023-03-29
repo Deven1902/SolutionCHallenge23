@@ -36,17 +36,16 @@ const signInWithGoogle = async () => {
     localStorage.setItem("login", true)
   } catch (err) {
     console.error(err);
-    alert(err.message);
   }
 };
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    localStorage.setItem("login", true)
+    return "success"
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    return err.message;
   }
 };
 
@@ -69,7 +68,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
+    return true;
   } catch (err) {
     console.error(err);
     alert(err.message);

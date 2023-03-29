@@ -68,6 +68,7 @@
   margin-left: 0.5rem;
 }
 
+
 @media screen and (max-width: 1050px) {
   .header {
     padding: 0 6%;
@@ -103,6 +104,7 @@
   .header nav li {
     margin-left: 0.9rem;
   }
+  
 
   .header img {
     width: 50px; /* adjust the size to your liking */
