@@ -24,6 +24,7 @@
 .image{
     width: 500px;
     height: 500px;
+    padding: 20px;
 }
 
 
@@ -34,5 +35,8 @@
 }
 
 .description{
-    padding-left: 30px;
+    white-space: pre-wrap;
+    text-align: justify;
+    margin-top: 20px;
+    padding: 100px 100px 100px 30px;
 }

@@ -35,10 +35,10 @@ const AllPostsPage = () => {
 
   return (
     <>
-      
+
 
       <div className={classes.allposts}>
-        <h1>Check what's new in the commuity</h1>
+        <h1 style={{ paddingBottom: 24 }}>Check what's new in the commuity</h1>
         {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
       </div>
     </>
