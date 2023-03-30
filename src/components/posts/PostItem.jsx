@@ -56,7 +56,7 @@ const PostItem = ({ post }) => {
             <p className="username">{post.uname}</p>
             <h3>{post.title}</h3>
             <address>{post.address}</address>
-            <p>{post.description}</p>
+            <p style={{ overflow: "clip" }}>{post.description}</p>
           </div>
         </div>
         <div className={classes.actions}>

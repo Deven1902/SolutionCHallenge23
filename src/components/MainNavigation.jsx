@@ -27,7 +27,7 @@ const MainNavigation = () => {
                 <Link to="/">All Posts</Link>
               </li>
               <li>
-                <Link to="/new-post">New Posts</Link>
+                <Link to="/new/post">New Posts</Link>
               </li>
               <li>
                 <Link to="/favourites">

@@ -19,8 +19,8 @@ const App = () => {
           <Route path="/" element={<AllPostsPage />} />
         </Route>
 
-        <Route path="/new-post" element={<ProtectedRoute />}>
-          <Route path="/new-post" element={<NewPostPage />} />
+        <Route path="/new/post" element={<ProtectedRoute />}>
+          <Route path="/new/post" element={<NewPostPage />} />
         </Route>
 
         <Route path="/favourites" element={<ProtectedRoute />}>

@@ -28,32 +28,32 @@ const NewPostForm = (props) => {
 
   return (
 
-      <form className={classes.form} onSubmit={onSubmit}>
-        <div className={classes.control}>
-          <label htmlFor="title">Post Title</label>
-          <input type="text" required id="title" ref={titleInputRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor="address">Address</label>
-          <input type="text" required id="address" ref={addressInputRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor="image">Post Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor="description">Post Description</label>
-          <textarea
-            id="description"
-            rows="5"
-            required
-            ref={descriptionRef}
-          ></textarea>
-        </div>
-        <div className={classes.actions}>
-          <button>Add New Post</button>
-        </div>
-      </form>
+    <form className={classes.form} onSubmit={onSubmit}>
+      <div className={classes.control}>
+        <label htmlFor="title">Post Title</label>
+        <input type="text" required id="title" ref={titleInputRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="address">Address</label>
+        <input type="text" required id="address" ref={addressInputRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="image">Post Image (url)</label>
+        <input type="url" required id="image" ref={imageInputRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor="description">Post Description</label>
+        <textarea
+          id="description"
+          rows="5"
+          required
+          ref={descriptionRef}
+        ></textarea>
+      </div>
+      <div className={classes.actions}>
+        <button>Add New Post</button>
+      </div>
+    </form>
 
   );
 };
