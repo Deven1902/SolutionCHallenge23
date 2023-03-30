@@ -41,7 +41,7 @@ const MainNavigation = () => {
                 <li onClick={() => {
                   logout();
                 }}
-                  style={{ color: 'white', fontSize: 18, fontWeight: 'normal' }}
+                  style={{ color: 'white', fontSize: 18, fontSize: 24 }}
                 >
                   Logout
                 </li>

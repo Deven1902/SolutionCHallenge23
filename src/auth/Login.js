@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 import google from "../icons/google.png"
 import { Snackbar } from "@mui/material";
+import classes from "../pages/AllPosts.module.css"
 
 
 function Login() {
@@ -38,7 +39,27 @@ function Login() {
   return (
     loading ? <div>Loading...</div>
       :
+
       <div className="login">
+
+        <div className={classes.mainQuote}>
+          <div className={classes.quoteHeading}>
+            Together we can <br />
+            Make it Happen <br />
+          </div>
+
+          <div className={classes.quoteSubheading}>
+            Connecting Communities across the world!!!
+          </div>
+        </div>
+
+
+
+
+
+
+
+
         <div className="login__container">
           <input
             type="text"

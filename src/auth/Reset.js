@@ -34,6 +34,7 @@ function Reset() {
   return (
     <div className="reset">
       <div className="reset__container">
+        <div className="resettext">Enter your email to reset your password</div>
         <input
           type="text"
           className="reset__textBox"
@@ -52,7 +53,7 @@ function Reset() {
             }
           }}
         >
-          Send password reset email
+          Reset
         </button>
         <div>
           Don't have an account? <Link to="/register">Register</Link> now.

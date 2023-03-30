@@ -13,7 +13,8 @@ const ProtectedRoute = (props) => {
 
 
     if (props.reverse) {
-        return (user
+        return (
+            user
             ? <AllPostsPage />
             : <Outlet />
         )

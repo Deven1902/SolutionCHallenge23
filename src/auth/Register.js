@@ -47,6 +47,7 @@ function Register() {
   }, [user, loading]);
   return (
     <div className="register">
+      <div className="reg_text" style={{ fontSize: 36, paddingBottom: 20, fontWeight: 800, fontFamily: 'Open Sans', letterSpacing: "0.1rem" }}>Want to contribute your part?</div>
       <div className="register__container">
         <input
           type="text"
