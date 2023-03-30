@@ -37,15 +37,14 @@ const MainNavigation = () => {
                   </span>
                 </Link>
               </li>
-              <Link to="/">
-                <li onClick={() => {
-                  logout();
-                }}
-                  style={{ color: 'white', fontSize: 18, fontSize: 24 }}
-                >
+              <li onClick={() => {
+                logout();
+              }}
+              >
+                <Link to="/">
                   Logout
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
             :
             <></>

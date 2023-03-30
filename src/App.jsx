@@ -6,6 +6,7 @@ import MainNavigation from "./components/MainNavigation";
 import ProtectedRoute from "./components/protectedRoute";
 import Register from "./auth/Register";
 import Reset from "./auth/Reset";
+import PostPage from "./pages/PostPage";
 
 
 
@@ -24,6 +25,10 @@ const App = () => {
 
         <Route path="/favourites" element={<ProtectedRoute />}>
           <Route path="/favourites" element={<FavouritesPage />} />
+        </Route>
+
+        <Route path="/post/:id" element={<ProtectedRoute />}>
+          <Route path="/post/:id" element={<PostPage />} />
         </Route>
 
         <Route path="/register" element={<ProtectedRoute reverse={true} />}>
