@@ -1,16 +1,21 @@
-.allmeetups {
+.allposts {
   text-align: center;
 }
 
 .mainQuote {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .quoteHeading {
+  text-align: center;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 54px;
   line-height: 87px;
   letter-spacing: 0.1em;
 

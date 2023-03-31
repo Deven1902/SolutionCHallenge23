@@ -3,8 +3,16 @@
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   width: 50%;
-  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 4rem;
 }
+
+.card:hover{
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 768px) {
   .card {

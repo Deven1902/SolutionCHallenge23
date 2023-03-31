@@ -3,11 +3,12 @@ import Card from "../ui/Card";
 import { useContext } from "react";
 import FavouritesContext from "../../store/favourites-context";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const PostItem = ({ post }) => {
   const favouriteCtx = useContext(FavouritesContext);
   const isItemFavourite = favouriteCtx.isItemFavourite(post.id);
-
+  const navigate = useNavigate()
   const toggleFavourite = () => {
     if (isItemFavourite) {
       swal({
@@ -46,14 +47,17 @@ const PostItem = ({ post }) => {
 
   return (
     <Card>
-      <li className={classes.item}>
-        <div className={classes.image}>
-          <img src={post.image} alt={post.title} />
-        </div>
-        <div className={classes.content}>
-          <h3>{post.title}</h3>
-          <address>{post.address}</address>
-          <p>{post.description}</p>
+      <li className={classes.item} >
+        <div className="clickable" onClick={() => { navigate(`/post/${post.id}`, { state: post }) }}>
+          <div className={classes.image}>
+            <img src={post.image} alt={post.title} />
+          </div>
+          <div className={classes.content}>
+            <p className="username">{post.uname}</p>
+            <h3>{post.title}</h3>
+            <address>{post.address}</address>
+            <p style={{ overflow: "clip" }}>{post.description.split(/\s+/).slice(0, 30).join(" ")}...</p>
+          </div>
         </div>
         <div className={classes.actions}>
           <button onClick={toggleFavourite}>

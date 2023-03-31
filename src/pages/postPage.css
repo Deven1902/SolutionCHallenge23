@@ -1,0 +1,42 @@
+.main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.title{
+    padding-top: 10px;
+    font-size: xx-large;
+    padding-left: 30px;
+    font-weight: bold;
+}
+.uname{
+    padding-left: 30px;
+}
+
+.address{
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.image{
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+}
+
+
+.image > img{
+    object-fit: contain;
+    width: 500px;
+    height: 500px;
+}
+
+.description{
+    white-space: pre-wrap;
+    text-align: justify;
+    margin-top: 20px;
+    padding: 100px 100px 100px 30px;
+}

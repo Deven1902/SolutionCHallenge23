@@ -35,20 +35,10 @@ const AllPostsPage = () => {
 
   return (
     <>
-      <div className={classes.mainQuote}>
-        <div className={classes.quoteHeading}>
-          Together <br></br>
-          We can <br></br>
-          Make it Happen <br></br>
-        </div>
 
-        <div className={classes.quoteSubheading}>
-          Connecting Communities across the world!!!
-        </div>
-      </div>
 
       <div className={classes.allposts}>
-        <h1>Check What's new in the commuity</h1>
+        <h1 style={{ paddingBottom: 24 }}>Check what's new in the commuity</h1>
         {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}
       </div>
     </>

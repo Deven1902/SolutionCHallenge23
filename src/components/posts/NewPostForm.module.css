@@ -1,5 +1,8 @@
 .form {
   padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .control {
@@ -25,6 +28,7 @@
 .actions {
   margin-top: 1rem;
   text-align: right;
+  align-self: center;
 }
 
 .actions button {
@@ -42,4 +46,18 @@
 .actions button:active {
   background-color: #000000;
   border-color: #000000;
+}
+
+
+@media (min-width: 768px) {
+  .form{
+    width: 80%;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .form{
+    width: 50%;
+  }
 }
