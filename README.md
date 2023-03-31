@@ -12,9 +12,11 @@ A step by step list of commands that informs how to install this project.
 
 For Windows
 
-`git clone project-url`
+`git clone https://github.com/Deven1902/SolutionCHallenge23.git`
 
-`$ npm install` 
+`$ npm install`
+
+`$ npm start`
 
 ## Screenshots
 Here below you can see some screen shots of the project:- 
