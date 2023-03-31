@@ -10,8 +10,6 @@ With this project we aim to facilitate easier collaboration and between all the 
 ## Installation
 A step by step list of commands that informs how to install this project.
 
-For Windows
-
 `git clone https://github.com/Deven1902/SolutionCHallenge23.git`
 
 `$ npm install`
