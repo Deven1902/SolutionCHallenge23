@@ -11,6 +11,7 @@ import PostPage from "./pages/PostPage";
 
 
 const App = () => {
+  
   return (
     <>
       <MainNavigation />
