@@ -21,6 +21,9 @@ For Windows
 ## Screenshots
 Here below you can see some screen shots of the project:- 
 
+![Login Page](https://github.com/Deven1902/SolutionCHallenge23/blob/main/public/community-hub-4.web.app(1).png) 
+
+![Home Page] (https://github.com/Deven1902/SolutionCHallenge23/blob/main/public/community-hub-4.web.app(2).png) 
 
 
 ## Features
