@@ -16,17 +16,17 @@ const AllPostsPage = () => {
         return response.json();
       })
       .then((data) => {
-        var meetups = [];
+        var posts = [];
         for (const key in data) {
-          const meetup = {
+          const post = {
             id: key,
             ...data[key],
           };
-          meetups.push(meetup);
+          posts.push(post);
         }
-        meetups = meetups.reverse();
-        console.log(meetups);
-        setLoadedPosts(meetups);
+        posts = posts.reverse();
+        console.log(posts);
+        setLoadedPosts(posts);
         setLoading(false);
       });
   };
@@ -35,8 +35,6 @@ const AllPostsPage = () => {
 
   return (
     <>
-
-
       <div className={classes.allposts}>
         <h1 style={{ paddingBottom: 24 }}>Check what's new in the commuity</h1>
         {!isLoading ? <PostList posts={loadedPosts} /> : <p>Loading...</p>}

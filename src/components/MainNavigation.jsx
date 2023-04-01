@@ -37,9 +37,7 @@ const MainNavigation = () => {
                   </span>
                 </Link>
               </li>
-              <li onClick={() => {
-                logout();
-              }}
+              <li onClick={logout}
               >
                 <Link to="/">
                   Logout
